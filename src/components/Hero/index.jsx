@@ -1,4 +1,5 @@
-import { Button } from "../Button"
+import { useState } from 'react';
+import { Button } from "../Button";
 import { 
     HeroContainer, 
     Subtitle, 
@@ -6,15 +7,20 @@ import {
     Title, 
     Strong, 
     Information,
-    Cup,
-    Circle
-} from "./HeroStyles"
-import cupImage from '../../assets/orange-cup.png'
-import circleImage from '../../assets/circle-green.png' 
+} from "./HeroStyles";
+import { CupsList } from "../CupsList/index.jsx";
+import { CupComponent } from '../Cup/index.jsx';
 
+export const HeroSection = () => {
+    const [selectedCupImage, setSelectedCupImage] = useState(null);
+    const [selectedCircleImage, setSelectedCircleImage] = useState(null);
 
-export const HeroSection = () =>{
-    return(
+    const handleSelect = (cupImage, circleImage) => {
+        setSelectedCupImage(cupImage);
+        setSelectedCircleImage(circleImage);
+    };
+
+    return (
         <HeroContainer>
             <TextContent>
                 <Title>Mais que Café</Title>
@@ -24,11 +30,10 @@ export const HeroSection = () =>{
                     Alguns dos cafés mais populares incluem o Caffè Americano, o Cappuccino, o Latte Macchiato e o Espresso.
                     Além disso, a Starbucks oferece bebidas quentes e frias, doces diferenciados e sanduíches.
                 </Information>
-                <Button/>
+                <Button />
             </TextContent>
-            <Circle src={circleImage} alt="circle" />
-            <Cup src={cupImage} alt="cup-image" />
-            
+            <CupComponent selectedCupImage={selectedCupImage} selectedCircleImage={selectedCircleImage} />
+            <CupsList onSelect={handleSelect} />
         </HeroContainer>
-    )
-}
+    );
+};

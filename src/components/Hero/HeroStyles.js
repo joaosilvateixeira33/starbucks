@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const HeroContainer = styled.section`
+    margin: 0 180px;
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin: 0 160px;
 `
 
 export const TextContent = styled.div`
@@ -33,22 +33,9 @@ export const Strong = styled.span`
 
 export const Information = styled.p`
     font-family: var(--font-general);
-    font-weight: 700;
+    font-weight: 400;
     font-size: 24px;
     color: var(--brand-color-2);
     line-height: 36px;
     width: 65%;
-`
-
-export const Circle = styled.img`
-    position: absolute;
-    top: 47.3%;
-    right: 0;
-`
-
-export const Cup = styled.img`
-    position: absolute;
-    top: 35%;
-    right: 0;
-    height: 60vh;
 `

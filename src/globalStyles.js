@@ -11,12 +11,17 @@ export const GlobalStyles = createGlobalStyle`
         --grey-color-2: #FFFFFF;
         --brand-color-1: #037143;
         --brand-color-2: #000000CC;
+        --brand-color-3: #1E3932;
     }
     
     *{
         padding: 0;
         margin: 0;
         box-sizing: border-box;
-
     }
+
+    button{
+        cursor: pointer;
+    }
+
 `
