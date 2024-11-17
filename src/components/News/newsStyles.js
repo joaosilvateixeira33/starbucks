@@ -11,6 +11,7 @@ export const NewsContainer = styled.section`
 
     @media (max-width: 480px){
        flex-direction: column;
+       /// comentario
     }
 `
 
