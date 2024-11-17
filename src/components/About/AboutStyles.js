@@ -6,6 +6,11 @@ export const AboutContainer = styled.div`
     display: flex;
     align-items: center;
     gap: 10%;
+
+    @media (max-width: 480px){
+        margin: 0;
+        flex-direction: column;
+    }
 `
 
 export const AboutTextContent = styled.div`
@@ -27,4 +32,9 @@ export const Information = styled.p`
     font-weight: 400;
     font-size: 24px;
     line-height: 36px;
+
+    @media (max-width: 480px){
+        font-size: 20px;
+        text-align: justify;
+    }
 `

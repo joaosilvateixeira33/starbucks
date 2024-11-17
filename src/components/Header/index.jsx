@@ -1,19 +1,19 @@
 import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.png';
-import { HeaderContainer } from './HeaderStyles';
+import { Content, HeaderContainer, Item, LogoImage, Nav } from './HeaderStyles';
 
 
 export const Header = () =>{
     return(
         <HeaderContainer>
-            <img src={logo} alt="logo starbucks" />
-            <nav>
-                <ul>
-                    <li><Link to='/'>Home</Link></li>
-                    <li><Link to='/news'>Novidade</Link></li>
-                    <li><Link to='/about'>Sobre</Link></li>
-                </ul>
-            </nav>
+            <LogoImage src={logo} alt="logo starbucks" />
+            <Nav>
+                <Content>
+                    <Item><Link to='/'>Home</Link></Item>
+                    <Item><Link to='/news'>Novidade</Link></Item>
+                    <Item><Link to='/about'>Sobre</Link></Item>
+                </Content>
+            </Nav>
         </HeaderContainer>
     )
 }

@@ -11,6 +11,11 @@ const ButtonAbout = styled.button`
     font-family: var(--font-title);
     font-weight: 700;
     font-size: 20px;
+
+    @media (max-width: 480px){
+        font-size: 15px;
+        width: 36vw;
+    }
 `
 
 export const Button = () =>{
