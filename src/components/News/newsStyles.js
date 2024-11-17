@@ -1,11 +1,13 @@
 import styled from "styled-components";
 
-export const NewsContainer = styled.section`  
+export const NewsContainer = styled.section` 
+
     background-color: var(--brand-color-3);
     display: flex;
     justify-content: center;
     align-items: center;
     color: var(--grey-color-2);
+    height: 86.5vh;
 
     @media (max-width: 480px){
        flex-direction: column;
